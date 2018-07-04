@@ -36,7 +36,7 @@ require 'pry'
     #gets second header
       binding.pry
     projects[title.to_sym] = {
-      :image_link => project.css("div.social-icon-container").attribute("src").value,
+      :image_link => project.css("div.project-thumbnail a img").attribute("src").value,
       #:image_link=> "https://s3.amazonaws.com/ksr/projects/801922/photo-little.jpg?1391909090"
       :description => project.css("p.bbcard_blurb").text,
       # :description=>
